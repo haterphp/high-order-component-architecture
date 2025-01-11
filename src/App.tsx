@@ -1,19 +1,16 @@
-import { useInjectComponent } from "./render-core/Component/useInjectComponent";
-import { SandboxComponent } from "./sandbox/Sandbox";
+import { Theme } from "@radix-ui/themes";
+import { useInjectComponent } from "./core/Render/Component/useInjectComponent";
+import { ITodoAppComponentProps, TodoApp } from "./examples/todo/TodoApp";
+import { TodoAppState } from "./examples/todo/TodoAppState";
 
 export default function App() {
-  const sandboxComponentRef1 = useInjectComponent<HTMLDivElement>(
-    (root: HTMLElement) => new SandboxComponent(root, 1000)
-  );
-
-  const sandboxComponentRef2 = useInjectComponent<HTMLDivElement>(
-    (root: HTMLElement) => new SandboxComponent(root, 5000)
+  const todoAppComponentRef = useInjectComponent<HTMLDivElement, TodoAppState, ITodoAppComponentProps>(
+    (root: HTMLDivElement) => new TodoApp(root)
   );
 
   return (
-    <>
-      <div ref={sandboxComponentRef1}></div>
-      <div ref={sandboxComponentRef2}></div>
-    </>
+	<Theme>
+		<div ref={todoAppComponentRef} style={{ width: '100%', height: '100%' }} />
+	</Theme>
   );
 }
