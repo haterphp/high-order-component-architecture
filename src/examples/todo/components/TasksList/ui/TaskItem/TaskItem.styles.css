@@ -1,0 +1,8 @@
+.task_item__container {
+	width: 100%;
+
+	padding: 15px;
+
+	border: solid 1px #eeeeee;
+	border-radius: .25rem;
+}

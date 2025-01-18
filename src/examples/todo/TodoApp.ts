@@ -1,9 +1,10 @@
 import { HighOrderComponent, HighOrderComponentState, ICommonComponentProps, RenderComponent } from "../../core/Render";
 import { SearchFormComponent } from "./components/SearchForm/SearchForm";
+import { TasksListComponent } from "./components/TasksList/TasksList";
 import { TodoAppState } from "./TodoAppState";
 
 type TodoAppComponents =	'searchFormComponent'
-							// | 'taskListComponent'
+							| 'taskListComponent'
 
 export interface ITodoAppComponentProps extends ICommonComponentProps {
 	components: Record<TodoAppComponents, (root: HTMLDivElement) => HighOrderComponent<HighOrderComponentState>>
@@ -28,7 +29,8 @@ export class TodoApp extends HighOrderComponent<TodoAppState, ITodoAppComponentP
 
 	private __defineChildComponents(): ITodoAppComponentProps['components'] {
 		return {
-			searchFormComponent: (root) => new SearchFormComponent(root, this._state)
+			searchFormComponent: (root) => new SearchFormComponent(root, this._state),
+			taskListComponent: (root) => new TasksListComponent(root, this._state)
 		}
 	}
 }
