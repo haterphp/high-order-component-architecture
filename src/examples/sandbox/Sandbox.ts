@@ -1,4 +1,4 @@
-import { HighOrderComponent } from "../../core/Render/Component/HighOrderComponent";
+import { HighOrderComponent } from "../../common/core/Component/HighOrderComponent";
 import { SandboxContentRenderComponent } from "./renderers/SandboxContent";
 import { SandboxLoadingRenderComponent } from "./renderers/SandboxLoading";
 import { SandboxState } from "./Sandbox.state";

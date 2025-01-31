@@ -1,4 +1,4 @@
-import { HighOrderComponent, HighOrderComponentState, RenderComponent, RenderComponentVariantsEnum } from "../../../../core/Render";
+import { HighOrderComponent, HighOrderComponentState, RenderComponent, RenderComponentVariantsEnum } from "../../../../common/core";
 import { TodoAppState } from "../../TodoAppState";
 import { TasksListLoadingRenderComponent } from "./renderers/TasksListLoading";
 

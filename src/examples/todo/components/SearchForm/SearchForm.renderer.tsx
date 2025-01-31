@@ -1,5 +1,5 @@
 import { TextField } from "@radix-ui/themes";
-import { ChangeEventKeyBuilder, ICommonComponentProps, useRenderComponent } from "../../../../core/Render";
+import { ChangeEventKeyBuilder, ICommonComponentProps, useRenderComponent } from "../../../../common/core";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { ChangeEventHandler, useState } from "react";
 import { UPDATE_SEARCH_STRING } from "./SearchForm";

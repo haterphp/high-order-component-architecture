@@ -1,4 +1,4 @@
-import { HighOrderComponentState, IHighOrderComponentState } from "../../../../core/Render";
+import { HighOrderComponentState, IHighOrderComponentState } from "../../../../common/core";
 
 interface ISearchFormComponentStateObject extends IHighOrderComponentState {
 	searchString: string

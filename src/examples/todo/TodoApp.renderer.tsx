@@ -1,4 +1,4 @@
-import { useInjectComponent, useRenderComponent } from '../../core/Render'
+import { useInjectComponent, useRenderComponent } from '../../common/core'
 import { ITodoAppComponentProps } from './TodoApp'
 import './TodoApp.styles.css'
 

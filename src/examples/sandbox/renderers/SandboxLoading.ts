@@ -1,6 +1,6 @@
-import { UPDATE_RENDER_COMPONENT_KEY } from "../../../core/Render/Component/HighOrderComponent";
-import { RenderComponent } from "../../../core/Render/RenderComponent/RenderComponent";
-import { RenderComponentVariantsEnum } from "../../../core/Render/RenderComponent/RenderComponentVariants";
+import { UPDATE_RENDER_COMPONENT_KEY } from "../../../common/core/Component/HighOrderComponent";
+import { RenderComponent } from "../../../common/core/RenderComponent/RenderComponent";
+import { RenderComponentVariantsEnum } from "../../../common/core/RenderComponent/RenderComponentVariants";
 import { SandboxState } from "../Sandbox.state";
 
 interface ISandboxLoadingRenderComponentPayload {

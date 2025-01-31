@@ -1,8 +1,8 @@
-import { RenderComponentVariantsEnum } from "../../core/Render/RenderComponent/RenderComponentVariants";
+import { RenderComponentVariantsEnum } from "../../common/core/RenderComponent/RenderComponentVariants";
 import {
   HighOrderComponentState,
   IHighOrderComponentState,
-} from "../../core/Render/State/HighOrderComponentState";
+} from "../../common/core/State/HighOrderComponentState";
 
 interface ISandboxStateObject extends IHighOrderComponentState {
   test: string;

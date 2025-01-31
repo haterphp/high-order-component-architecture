@@ -1,7 +1,7 @@
 import { ChangeEventHandler, useEffect, useState } from "react";
-import { ICommonComponentProps } from "../../../core/Render/Component/HighOrderComponent";
-import { useRenderComponent } from "../../../core/Render/RenderComponent/useRenderComponent";
-import { ChangeEventKeyBuilder } from "../../../core/Render/State/AbstractState";
+import { ICommonComponentProps } from "../../../common/core/Component/HighOrderComponent";
+import { useRenderComponent } from "../../../common/core/RenderComponent/useRenderComponent";
+import { ChangeEventKeyBuilder } from "../../../common/core/State/AbstractState";
 
 export default function SandboxContentRenderer(props: ICommonComponentProps) {
   const { eventEmitter } = props;

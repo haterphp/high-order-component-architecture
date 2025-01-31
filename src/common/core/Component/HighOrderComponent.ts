@@ -8,7 +8,7 @@ import {
   HighOrderComponentState,
 } from "../State/HighOrderComponentState";
 
-type HighOrderRenderComponents<TState extends HighOrderComponentState, TComponentProps extends ICommonComponentProps> =
+export type HighOrderRenderComponents<TState extends HighOrderComponentState, TComponentProps extends ICommonComponentProps> =
   Partial<
     Record<
       Exclude<RenderComponentVariantsEnum, RenderComponentVariantsEnum.CONTENT>,
@@ -84,6 +84,7 @@ export abstract class HighOrderComponent<
     );
 
     // Set render state to injected
+	this._state.injected()
     this._state.updateRenderState(HighOrderComponentRenderState.INJECTED);
 
     // Call render hook for first time
@@ -95,7 +96,10 @@ export abstract class HighOrderComponent<
 
   public removed(): void {
     this.__root.unmount();
-    this._state.updateRenderState(HighOrderComponentRenderState.REMOVED);
+
+	this._state.updateRenderState(HighOrderComponentRenderState.REMOVED);
+	this._state.removed()
+
     this._eventEmitter.removeAllListeners();
   }
 

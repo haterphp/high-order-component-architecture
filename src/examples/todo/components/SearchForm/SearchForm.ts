@@ -1,4 +1,4 @@
-import { ChangeEventKeyBuilder, HighOrderComponent, RenderComponent } from "../../../../core/Render";
+import { ChangeEventKeyBuilder, HighOrderComponent, RenderComponent } from "../../../../common/core";
 import { TodoAppState } from "../../TodoAppState";
 import { SearchFormComponentState } from "./SearchFormState";
 

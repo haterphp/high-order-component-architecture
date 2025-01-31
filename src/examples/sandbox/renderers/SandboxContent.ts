@@ -1,5 +1,5 @@
-import { RenderComponent } from "../../../core/Render/RenderComponent/RenderComponent";
-import { ChangeEventKeyBuilder } from "../../../core/Render/State/AbstractState";
+import { RenderComponent } from "../../../common/core/RenderComponent/RenderComponent";
+import { ChangeEventKeyBuilder } from "../../../common/core/State/AbstractState";
 import { SandboxState } from "../Sandbox.state";
 
 export class SandboxContentRenderComponent extends RenderComponent<SandboxState> {

@@ -1,4 +1,4 @@
-import { HighOrderComponent, HighOrderComponentState, ICommonComponentProps, RenderComponent } from "../../core/Render";
+import { HighOrderComponent, HighOrderComponentState, ICommonComponentProps, RenderComponent } from "../../common/core";
 import { SearchFormComponent } from "./components/SearchForm/SearchForm";
 import { TasksListComponent } from "./components/TasksList/TasksList";
 import { TodoAppState } from "./TodoAppState";

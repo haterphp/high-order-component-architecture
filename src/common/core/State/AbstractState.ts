@@ -32,6 +32,10 @@ export abstract class AbstractState<
     return this.__eventEmitter;
   }
 
+  public injected(): void {}
+
+  public removed(): void {}
+
   public addEventEmitter(eventEmitter: EventEmitter): void {
     this.__eventEmitter = eventEmitter;
   }

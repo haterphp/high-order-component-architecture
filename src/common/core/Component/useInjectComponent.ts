@@ -11,8 +11,8 @@ import { HighOrderComponent, ICommonComponentProps } from "./HighOrderComponent"
 
 export const useInjectComponent = <
 	TRootHTMLElement extends HTMLElement,
-	TState extends HighOrderComponentState,
-	TComponentProps extends ICommonComponentProps
+	TState extends HighOrderComponentState = HighOrderComponentState,
+	TComponentProps extends ICommonComponentProps = ICommonComponentProps
 >(
   componentFactory: (
     root: TRootHTMLElement

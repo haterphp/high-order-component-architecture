@@ -1,4 +1,4 @@
-import { HighOrderComponentState, IHighOrderComponentState } from "../../core/Render";
+import { ChangeEventKeyBuilder, HighOrderComponentState, IHighOrderComponentState } from "../../common/core";
 
 interface ITodoAppStateObject extends IHighOrderComponentState {
 	originalTasks: unknown[];
@@ -10,9 +10,19 @@ export class TodoAppState extends HighOrderComponentState<ITodoAppStateObject> {
 		super({ tasks: [], originalTasks: [] })
 	}
 
-	public setOriginalTasks(): void {}
+	public injected(): void {
+		this._eventEmitter.addListener(ChangeEventKeyBuilder('originalTasks'), this.setTasks.bind(this))
+	}
 
-	public addOriginalTask(): void {}
+	public setOriginalTasks(tasks: unknown[]): void {
+		this._setStateValue('originalTasks', () => tasks)
+	}
 
-	public setTasks(): void {}
+	public addOriginalTask(task: unknown): void {
+		this._setStateValue('originalTasks', (tasks) => tasks.concat(task))
+	}
+
+	public setTasks(tasks: unknown[]): void {
+		console.log(tasks, 'something happening here')
+	}
 }
